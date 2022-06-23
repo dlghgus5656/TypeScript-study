@@ -31,6 +31,17 @@ const b = superPrint([1, 2, true, false, "hi"]);
 // 2. 이게 바로 다형성(polymorphism)이다.
 
 // ? 제네릭(generic) 기본 문법
-function getText<T>(text: T): T {
-  return text;
+function getTest<T>(test: T): T {
+  return test;
 }
+
+// 인자를 여러개 사용할 때
+function getTest2<T, X>(test: T, b: X): T {
+  return test;
+}
+
+// Generics
+// 제네릭은 C#이나 Java와 같은 언어에서 재사용 가능한 컴포넌트를 만들기 위해 사용하는 기법이다.
+// 단일 타입이 아닌 다양한 타입에서 작동할 수 있는 컴포넌트를 생성할 수 있다.
+// (구체적인 타입을 지정하지 않고 다양한 인수와 리턴 값에 대한 타입을 처리할 수 있다.)
+// 타입스크립트에서 제네릭을 통해 인터페이스, 함수 등의 재사용성을 높일 수 있습니다.
