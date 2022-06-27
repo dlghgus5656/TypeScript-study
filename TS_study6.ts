@@ -136,3 +136,46 @@ dict.rmv("연근 갈비탕");
 dict.all();
 // 스시: 밥을 뭉쳐놓고 그 위에 재료를 얹어낸 음식
 // 김치: 한국의 음식,고춧가루로 배추를 버무려 숙성 및 발효시킨 음식
+
+// ! ----------------------------------------
+
+type Words2 = {
+  [key: string]: string;
+};
+
+class Dict2 {
+  private words: Words2;
+  constructor() {
+    this.words = {};
+  }
+  // 파라미터 부분에 클래스를 입력해 준 적이 없지만,
+  // 클래스를 타입으로 쓸 때는 가능하다.
+  add(word: Word2) {
+    if (this.words[word.term] === undefined) {
+      this.words[word.term] = word.def;
+    }
+  }
+  def(term: string) {
+    return this.words[term];
+  }
+  // ? static 메소드
+  // static Methods는 클래스를 생성안해도 사용이 가능하다.
+  static hello() {
+    return "hello";
+  }
+}
+
+// 보여주고 싶지만 수정은 불가능하게 만들고 싶으면 readonly를 사용한다.
+class Word2 {
+  constructor(public readonly term: string, public readonly def: string) {}
+}
+
+const kimchi2 = new Word2("kimchi", "한국의 음식");
+
+const dict2 = new Dict2();
+
+dict2.add(kimchi2);
+dict2.def("kimchi2");
+
+// static 메소드
+Dict2.hello();

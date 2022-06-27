@@ -28,7 +28,7 @@ abstract class User {
 }
 
 // Player2가 User을 상속한다.
-class Player2 extends User {
+class Player3 extends User {
   // 추상 메서드는 추상 클래스를 상속받는 클래스들이 반드시
   //구현(implement)해야하는 메서드이다.
   getNickName() {
@@ -36,7 +36,7 @@ class Player2 extends User {
   }
 }
 
-const hoho2 = new Player2("hoho", "las", "호호");
+const hoho2 = new Player3("hoho", "las", "호호");
 // 추상클래스의 인스턴스를 만들 수 없다.
 const hoho3 = new User("hoho", "las", "호호");
 

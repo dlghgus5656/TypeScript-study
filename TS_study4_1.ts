@@ -11,7 +11,7 @@ const d = superPrint2([1, 2, true, false, "hi"]);
 
 // 많은 것들이 있는 큰 타입 하나에서 그 중 달라질 수 있는 타입이라면
 // 그 타입에 extraInfo: E 같이 generic을 사용하자( 해당 타입을 재사용할 수 있다.)
-type Player<E> = {
+type Player2<E> = {
   name: string;
   extraInfo: E;
 };
@@ -20,7 +20,7 @@ type HohoExtra = {
   favFood: string;
 };
 
-type HohoPlayer = Player<HohoExtra>;
+type HohoPlayer = Player2<HohoExtra>;
 
 const hoho: HohoPlayer = {
   name: "hoho",
@@ -30,7 +30,7 @@ const hoho: HohoPlayer = {
 };
 
 // type들 끼리 일종의 상속 굳이 따지자면 재사용 할 수 있다.
-const haha: Player<null> = {
+const haha: Player2<null> = {
   name: "haha",
   extraInfo: null,
 };

@@ -3,7 +3,7 @@
 
 type Age = number;
 
-// Alias방법
+// Alias방법 (name: string;) 과 같이 string, number같은 것으로 타입을 지정 하는 것
 type Player = {
   // ! 아래처럼 readonly를 사용하면 읽기 전용으로 바뀐다. 즉 수정이 금지됨
   // ? JavaScript에서는 mutability(변경 가능성)이 기본값이지만
@@ -66,7 +66,7 @@ const abc: [string, number, boolean] = ["nico", 1, true];
 
 //unknown은 변수의 타입을 미리 알지 못 할때 (api의 응답방법을 모를때와 같은) 사용한다.
 // 이 경우 아래처럼 변수의 타입을 미리 지정하면 동작할 수 있다.
-let a: unknown;
+let x: unknown;
 
 if (typeof a === "number") {
   let b = a + 1;
