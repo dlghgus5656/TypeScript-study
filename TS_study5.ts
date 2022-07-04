@@ -14,7 +14,7 @@
 
 // 필드가 외부로부터는 보호되지만
 // 다른 자식 클래스에서는 사용되기를 원한다면 private가 아닌 protected를 사용하자
-abstract class User {
+abstract class Userr {
   constructor(
     private firstName: string,
     private lastName: string,
@@ -28,7 +28,7 @@ abstract class User {
 }
 
 // Player2가 User을 상속한다.
-class Player3 extends User {
+class Player3 extends Userr {
   // 추상 메서드는 추상 클래스를 상속받는 클래스들이 반드시
   //구현(implement)해야하는 메서드이다.
   getNickName() {
