@@ -13,7 +13,7 @@ type Prepend = {
 
 const last: Last = (arr) => arr[arr.length - 1];
 const la = last([1, 2, 3]);
-console.log(a);
+console.log(la);
 
 const prepend: Prepend = (arr2, item) => {
   arr2.unshift(item);
@@ -21,4 +21,4 @@ const prepend: Prepend = (arr2, item) => {
 };
 
 const pp = prepend([1, 2, 3], 0);
-console.log(b);
+console.log(pp);
