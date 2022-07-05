@@ -23,7 +23,7 @@ abstract class User {
 // User 클래스를 상속한다면, sayHi랑 fullName을 구현해야 하고
 // firstName과 lastName을 갖게 됨
 // protected는 추상 클래스로부터 상속받은 클래스들이 property에 접근 핟도록 해준다.
-class Player extends User {
+class Player1_1 extends User {
   fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
@@ -47,7 +47,7 @@ interface Human {
 // 하나 이상의 인터페이스를 동시에 상속할 수 있다.
 // 인터페이스를 상속할 때에는 property를 private으로 만들지 못한다.
 // implements는 자바스크립트엔 없다 implements쓰면 extends보다 코드가 가벼워진다.
-class Player2 implements User2_1, Human {
+class Player2_2 implements User2_1, Human {
   constructor(
     public firstName2: string,
     public lastName2: string,
